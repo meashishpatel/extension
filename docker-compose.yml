@@ -15,17 +15,7 @@ services:
     ports:
       - "4000:4000" # Backend exposed on port 4000
     environment:
-      - MONGO_URI=mongodb://mongo:27017/extensionsdb
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:latest
-    container_name: mongo
-    ports:
-      - "27017:27017" # MongoDB exposed on port 27017
-    volumes:
-      - mongo_data:/data/db
+      # - MONGO_URI=mongodb+srv:/ABCD.mongodb.net/extensionsDB # Use your MongoDB Atlas URI
 
 volumes:
   mongo_data:
